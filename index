@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Testimonials - KoreanLearnin</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', Roboto, Arial, sans-serif;
+  background: url('https://cdn.shopify.com/s/files/1/0674/6747/7282/files/sky.png?v=1750990355') repeat;
+  background-size: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 220px;
+  }
+}
+
+/* Page Title */
+.page-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000,
+    0 0 20px rgba(65, 192, 255, 0.5);
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ====== LOOM VIDEO ====== */
+.loom-video-container {
+  max-width: 640px;
+  margin: 0 auto 24px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border: 3px solid #41c0ff;
+}
+
+.loom-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.loom-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ====== CTA SECTION ====== */
+.cta-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cta-main-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(180deg, #ff4455 0%, #cc1133 50%, #aa0022 100%);
+  border: 3px solid #ff6677;
+  border-radius: 14px;
+  padding: 18px 36px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow:
+    0 6px 0 #880015,
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 68, 85, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  position: relative;
+  top: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-main-btn:hover {
+  background: linear-gradient(180deg, #ff5566 0%, #dd2244 50%, #bb1133 100%);
+  box-shadow:
+    0 6px 0 #880015,
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(255, 68, 85, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
+
+.cta-main-btn:active {
+  top: 4px;
+  box-shadow:
+    0 2px 0 #880015,
+    0 4px 10px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 68, 85, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 520px) {
+  .cta-main-btn {
+    font-size: 12px;
+    padding: 14px 20px;
+  }
+}
+
+/* ====== END CTA SECTION ====== */
+
+/* Testimonials Container */
+.testimonials-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 3px solid #41c0ff;
+}
+
+/* Instruction Text */
+.instruction-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    -1px 0 0 #000,
+    1px 0 0 #000,
+    0 -1px 0 #000,
+    0 1px 0 #000;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  background: linear-gradient(180deg, #2a2a4a 0%, #222240 100%);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 2px solid #3a3a5a;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:last-child {
+  margin-bottom: 0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(65, 192, 255, 0.2);
+  border-color: #41c0ff;
+}
+
+/* Testimonial Header */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 3px solid #41c0ff;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #41c0ff;
+  margin-bottom: 4px;
+}
+
+.testimonial-meta {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* Audio Player Container */
+.audio-player-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.audio-player-wrapper audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+/* Light themed audio player */
+audio::-webkit-media-controls-panel {
+  background: #ffffff;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #ffffff;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #333333;
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.4;
+  font-style: italic;
+  padding: 15px 20px;
+  margin-top: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 3px solid #667eea;
+  border-radius: 0 8px 8px 0;
+}
+
+.testimonial-quote::before {
+  content: '"';
+  color: #667eea;
+  font-weight: bold;
+}
+
+.testimonial-quote::after {
+  content: '"';
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Stars Rating */
+.stars-rating {
+  display: flex;
+  gap: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.star.half {
+  background: linear-gradient(90deg, #ffd700 50%, #4a4a6a 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.star.empty {
+  color: #4a4a6a;
+  text-shadow: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.footer-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .testimonials-container {
+    padding: 20px 15px;
+  }
+  
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  
+  .testimonial-header {
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .testimonial-name {
+    font-size: 16px;
+  }
+}
+
+/* Play animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(65, 192, 255, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(65, 192, 255, 0.6); }
+}
+
+.testimonial-card.playing {
+  animation: pulse-glow 2s infinite;
+  border-color: #41c0ff;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/logo555.png?v=1757969221" alt="KoreanLearnin" class="logo">
+  </div>
+  
+  <!-- Page Title -->
+  <h1 class="page-title">🎧 Audio Testimonials 🎧</h1>
+  
+  <!-- Loom Video -->
+  <div class="loom-video-container">
+    <div class="loom-video-wrapper">
+      <iframe src="https://www.loom.com/embed/442c026595e343c5bbcc33fb728616e7" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="cta-section">
+    <a data-eo-form-toggle-id="3d55d566-287f-11f1-bb82-d39dc1cef6d2" href="#" class="cta-main-btn">
+      🎮 Want to take Korean Class? 🎮
+    </a>
+  </div>
+  
+  <!-- Testimonials Container -->
+  <div class="testimonials-container">
+    
+    <p class="instruction-text">Click the audio to hear the student's progress.</p>
+    
+    <!-- ========== STUDENTS WITH WRITTEN REVIEWS (TOP) ========== -->
+    
+    <!-- Jen - 5 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/jen.png?v=1769725231" alt="Jen"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Jen</div>
+          <div class="testimonial-meta">Student for 5 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Jen_5_months.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        Calvin's Korean learning school is a great way to learn Korean, in an interactive fun and supportive way. The discord community is great!
+      </div>
+    </div>
+    
+    <!-- Lily - 1 month -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/lily.png?v=1769725231" alt="Lily"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Lily</div>
+          <div class="testimonial-meta">Student for 1 month at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Lily_1_month.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        There are so many resources that Mr. Calvin has set up for us and the other students are all so friendly. Mr. Calvin has such a positive attitude, so much patience and enthusiasm for teaching.
+      </div>
+    </div>
+    
+    <!-- Vanessa - 2 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/vanessa.png?v=1769725231" alt="Vanessa"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Vanessa</div>
+          <div class="testimonial-meta">Student for 2 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Nesa_2_months.mp3?v=1769723361" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        The tutoring sessions help with more attention on the areas I need to work on personally without taking away from others in class. Love it!
+      </div>
+    </div>
+    
+    <!-- Rebec - 7 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/rebec.png?v=1769725231" alt="Rebec"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Rebec</div>
+          <div class="testimonial-meta">Student for 7 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/rebec_7_months.mp3?v=1769723361" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        I am amazed that within a few months I am starting to understand some words, reading, and speaking. I am grateful for the teachers. Thanks for making learning Korean fun.
+      </div>
+    </div>
+    
+    <!-- Tiffany - 9 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/tiffany.png?v=1769725231" alt="Tiffany"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Tiffany</div>
+          <div class="testimonial-meta">Student for 9 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Tiffany_9_months.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        This program is the best! You get way more than you pay for. Extra sessions for reading, sentence building, vocabulary, study groups, and more!!!!
+      </div>
+    </div>
+    
+    <!-- Theresa - 4 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/theresa.png?v=1769725231" alt="Theresa"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Theresa</div>
+          <div class="testimonial-meta">Student for 4 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Theresa_4_months.mp3?v=1769723362" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        I love being in this community that Mr. Calvin started and built for us. This community has helped me get through things more than people think!
+      </div>
+    </div>
+    
+    <!-- Alex - 4 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/alex.png?v=1769725231" alt="Alex"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Alex</div>
+          <div class="testimonial-meta">Student for 4 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Alex_4_months.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        Thanks for all of your teaching Calvin! Can't wait to see what this year holds for all of us and this community. Also thanks to all of the teachers and TAs for all of their teaching and help they have provided!
+      </div>
+    </div>
+    
+    <!-- Ellie - 5 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/ellie.png?v=1769725231" alt="Ellie"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Ellie</div>
+          <div class="testimonial-meta">Student for 5 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Ellie_month_5.mp3?v=1769723362" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        I'm so thankful for KoreanLearnin, besides my teacher, I consider you as my friend, a little voice in my head that said "you can do this" in one of the lowest emotional point in my life, your classes has given me a great support and motion.
+      </div>
+    </div>
+    
+    <!-- Melanie - 3 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/melanie.png?v=1769728524" alt="Melanie"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Melanie</div>
+          <div class="testimonial-meta">Student for 3 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/melanie_3_months.MP3?v=1769728682" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="testimonial-quote">
+        Very systematic, well-planned with prudence! I'm glad I chose this among other classes. It doesn't drag in fact, the opposite.. I think I've learned so much after a month. It is a bit pricey for me as a single parent but I think it's worth it. Hope it only takes 9 months 😁 I love the community as I've come to meet new friends and share the same passion.
+      </div>
+    </div>
+    
+    <!-- Jackie -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/jackie.png?v=1769729858" alt="Jackie"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Jackie</div>
+          <div class="testimonial-meta">Student</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="testimonial-quote">
+        Mr. Calvin and his team offer a variety of studies to introduce us to us the Korean language, keyboard, sentence structure and common phrases for everyday communication. The classes are interactive and no student is left behind. You get out of it what you put into it. If you are up to the challenge, this learning experience is worth your time and effort.
+      </div>
+    </div>
+    
+    
+    
+    <!-- ========== STUDENTS WITH AUDIO ONLY (BOTTOM) ========== -->
+    
+    <!-- Red - 3 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/red.png?v=1769728524" alt="Red"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Red</div>
+          <div class="testimonial-meta">Student for 3 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/red_3_months.MP3?v=1769728681" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Lucy - 3 weeks -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/lucy.png?v=1769725231" alt="Lucy"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Lucy</div>
+          <div class="testimonial-meta">Student for 3 weeks at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star half">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/lucy_audio_3_weeks.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Vicky - 2 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/vicky.png?v=1769725231" alt="Vicky"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Vicky</div>
+          <div class="testimonial-meta">Student for 2 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/vicky_month_2.mp3?v=1769723363" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Susan -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/susan.png?v=1769729328" alt="Susan"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Susan</div>
+          <div class="testimonial-meta">Student</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star empty">★</span>
+      </div>
+      <div class="testimonial-quote">
+        Enjoy this class-my study group is amazing. I feel the pace is a little fast for me -but getting there.
+      </div>
+    </div>
+    
+    <!-- Donna C. - 1 month -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/donna_c.png?v=1769725231" alt="Donna C."></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Donna C.</div>
+          <div class="testimonial-meta">Student for 1 month at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star half">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/donna_testimonial_1_month.mp3?v=1769723362" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Ebony - 1 month -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/ebony.png?v=1769725231" alt="Ebony"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Ebony</div>
+          <div class="testimonial-meta">Student for 1 month at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Jemgirl_ebony_1_month.mp3?v=1769723362" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Kiki - 2 months -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/kiki.png?v=1769725230" alt="Kiki"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Kiki</div>
+          <div class="testimonial-meta">Student for 2 months at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Kiki_month_2.mp3?v=1769723361" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Karah - 1 month -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/karah.png?v=1769725231" alt="Karah"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Karah</div>
+          <div class="testimonial-meta">Student for 1 month at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Karah_1_month.mp3?v=1769723360" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Yoshi - 2 weeks -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/yoshi.png?v=1769725231" alt="Yoshi"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Yoshi</div>
+          <div class="testimonial-meta">Student for 2 weeks at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star half">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/Yoshi_14_days.mp3?v=1769723359" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Jenny H. -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/jenny.png?v=1769729364" alt="Jenny H."></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Jenny H.</div>
+          <div class="testimonial-meta">Student</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star empty">★</span>
+        <span class="star empty">★</span>
+      </div>
+      <div class="testimonial-quote">
+        I know the class is beneficial for many, but the teaching style & format make it very difficult for me to learn. It's my fault for not doing more research before signing up. I'm looking at other teaching methods that might be a better fit for me.
+      </div>
+    </div>
+    
+    <!-- Morgan - 1 week -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/morgan.png?v=1769725231" alt="Morgan"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Morgan</div>
+          <div class="testimonial-meta">Student for 1 week at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/morgan_1_week.mp3?v=1769723359" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <!-- Mandhi - 1 month -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar"><img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/mandhi.png?v=1769725231" alt="Mandhi"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Mandhi</div>
+          <div class="testimonial-meta">Student for 1 month at time of recording</div>
+        </div>
+      </div>
+      <div class="stars-rating">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
+      <div class="audio-player-wrapper">
+        <audio controls preload="metadata">
+          <source src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/mandhi_month_1.mp3?v=1769723359" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    <p class="footer-text">🎮 KoreanLearnin • Learn Korean the Fun Way! 🎮</p>
+  </div>
+  
+</div>
+
+<script>
+// Add playing class when audio is playing
+document.querySelectorAll('audio').forEach(audio => {
+  const card = audio.closest('.testimonial-card');
+  
+  audio.addEventListener('play', () => {
+    // Pause all other audio
+    document.querySelectorAll('audio').forEach(a => {
+      if (a !== audio) {
+        a.pause();
+        a.closest('.testimonial-card').classList.remove('playing');
+      }
+    });
+    card.classList.add('playing');
+  });
+  
+  audio.addEventListener('pause', () => {
+    card.classList.remove('playing');
+  });
+  
+  audio.addEventListener('ended', () => {
+    card.classList.remove('playing');
+  });
+});
+</script>
+
+<script async src="https://eocampaign1.com/form/3d55d566-287f-11f1-bb82-d39dc1cef6d2.js" data-form="3d55d566-287f-11f1-bb82-d39dc1cef6d2"></script>
+</body>
+</html>
