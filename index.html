@@ -164,6 +164,51 @@ body {
   }
 }
 
+.discord-btn {
+  background: linear-gradient(180deg, #5865f2 0%, #3d4fd6 50%, #2d3db8 100%);
+  border-color: #7983f5;
+  box-shadow:
+    0 6px 0 #1e2a8a,
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(88, 101, 242, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.discord-btn:hover {
+  background: linear-gradient(180deg, #6875f5 0%, #4d5fe6 50%, #3d4fd6 100%);
+  box-shadow:
+    0 6px 0 #1e2a8a,
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(88, 101, 242, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.cta-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.discord-dropdown {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: max-height 0.4s ease, opacity 0.35s ease, transform 0.35s ease, margin-top 0.35s ease;
+  margin-top: 0;
+  pointer-events: none;
+}
+
+.discord-dropdown.open {
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 16px;
+  pointer-events: all;
+  padding: 6px 20px 10px 20px;
+}
+
 /* ====== END CTA SECTION ====== */
 
 /* Testimonials Container */
@@ -416,9 +461,16 @@ audio::-webkit-media-controls-time-remaining-display {
   
   <!-- CTA -->
   <div class="cta-section">
-    <a data-eo-form-toggle-id="3d55d566-287f-11f1-bb82-d39dc1cef6d2" href="#" class="cta-main-btn">
-      🎮 Want to take Korean Class? 🎮
-    </a>
+    <div class="cta-wrapper">
+      <a data-eo-form-toggle-id="3d55d566-287f-11f1-bb82-d39dc1cef6d2" href="#" class="cta-main-btn" onclick="toggleDiscord()">
+        🎮 Want to take Korean Class? 🎮
+      </a>
+      <div class="discord-dropdown" id="discordDropdown">
+        <a href="https://discord.gg/NS8pUeE5RF" target="_blank" rel="noreferrer" onclick="window.open('https://discord.gg/NS8pUeE5RF','_blank','noopener,noreferrer'); return false;" class="cta-main-btn discord-btn">
+          💬 Join the Free Discord While You Wait!
+        </a>
+      </div>
+    </div>
   </div>
   
   <!-- Testimonials Container -->
@@ -988,6 +1040,11 @@ audio::-webkit-media-controls-time-remaining-display {
 </div>
 
 <script>
+function toggleDiscord() {
+  const dropdown = document.getElementById('discordDropdown');
+  dropdown.classList.toggle('open');
+}
+
 // Add playing class when audio is playing
 document.querySelectorAll('audio').forEach(audio => {
   const card = audio.closest('.testimonial-card');
